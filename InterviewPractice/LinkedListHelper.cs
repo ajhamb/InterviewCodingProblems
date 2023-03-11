@@ -6,6 +6,8 @@ namespace InterviewPractice
 {
     public static class LinkedListHelper
     {
+        public const string LINK = "-->";
+
         public static LinkedListNode<int> InitiateLinkedList(List<int> list)
         {
             LinkedListNode<int> head = null;
@@ -35,11 +37,11 @@ namespace InterviewPractice
 
             while(head!=null)
             {
-                sb.Append(head.Data.ToString()).Append("--->");
+                sb.Append(head.Data.ToString()).Append(LINK);
                 head = head.Next;
             }
 
-            return sb.ToString(0, sb.Length - "-->".Length - 1);
+            return sb.ToString(0, sb.Length - LINK.Length - 1);
         }
 
         internal static string PrintReverse<T>(LinkedListNode<T> current)
@@ -47,7 +49,7 @@ namespace InterviewPractice
 
             if (current.Next == null) return current.Data.ToString();
             string ret = PrintReverse(current.Next);
-            return ret + "-->" + current.Data;
+            return ret + LINK + current.Data;
         }
     }
 

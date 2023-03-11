@@ -24,14 +24,6 @@ namespace InterviewPractice
             Next = next;
             this.Prev = prev;
         }
-        public string PrintReverse(LinkedListNode<int> current)
-        {
-
-            if (current.Next == null) return current.Data.ToString();
-            string ret = PrintReverse(current.Next);
-            return ret + "-->" + current.Data;
-        }
-
-
+      
     }
 }

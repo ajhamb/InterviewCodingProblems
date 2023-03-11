@@ -41,6 +41,14 @@ namespace InterviewPractice
 
             return sb.ToString(0, sb.Length - "-->".Length - 1);
         }
+
+        internal static string PrintReverse<T>(LinkedListNode<T> current)
+        {
+
+            if (current.Next == null) return current.Data.ToString();
+            string ret = PrintReverse(current.Next);
+            return ret + "-->" + current.Data;
+        }
     }
 
 

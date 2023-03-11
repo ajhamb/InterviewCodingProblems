@@ -38,14 +38,6 @@ namespace InterviewPractice
             return true;
         }
 
-        public string PrintReverse(LinkedListNode<int> current)
-        {            
-
-            if (current.Next == null) return current.Data.ToString() ;
-            string ret = PrintReverse(current.Next);
-            return ret + "-->" + current.Data;
-        }
-
         private LinkedListNode<int> FindNode(int data)
         {
             if (Head == null || Head.Next == null) return null;

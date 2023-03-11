@@ -16,15 +16,7 @@ namespace InterviewPractice
 
             #endregion
 
-            #region LinkedListsTester
 
-            //LinkedListNode<int> result = LinkedListTester.AddTwoLists(new LinkedListInt(new List<int> { 7, 1, 9, 9 }).Head, new LinkedListInt(new List<int> { 5, 9 }).Head);
-
-            #endregion
-
-            #region QueueWithTwoStackTester
-
-            #endregion  
 
         }
     }
